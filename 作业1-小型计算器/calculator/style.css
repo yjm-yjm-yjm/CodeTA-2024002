@@ -1,0 +1,76 @@
+/* 计算器样式 - 深色现代主题 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a2e;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  background: #16213e;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background: #0f3460;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  min-height: 84px;
+}
+
+.expression {
+  color: #7fa8d9;
+  font-size: 14px;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.result {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 58px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  color: #ffffff;
+  background: #1b2a4a;
+}
+
+.btn:active {
+  transform: scale(0.94);
+  filter: brightness(1.4);
+}
+
+.btn.func { background: #2d4263; color: #a8d8ea; }
+.btn.op { background: #e94560; }
+.btn.num { background: #1b2a4a; }
+.btn.zero { grid-column: span 2; }
+.btn.equals { background: #0f3460; border: 2px solid #e94560; }
+
+/* 移动端适配 */
+@media (max-width: 360px) {
+  .calculator { width: 94vw; }
+}
